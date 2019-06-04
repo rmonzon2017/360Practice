@@ -33,15 +33,15 @@ public class JSON_Practice {
         JSONArray Courses = new JSONArray();
 
         while (true) {
-            System.out.print("Enter Course Name: ");
-            String Course = input.nextLine();
+            System.out.print("Enter your address: ");
+            String addres = input.nextLine();
 
-            if (Course.length() == 0) {
+            if (addres.length() == 0) {
                 break;
             }
             //Get the grade 
-            System.out.print("Enter Grade: ");
-            int Grade = input.nextInt();
+            System.out.print("Enter Last Phone Number: ");
+            int Pnumber = input.nextInt();
 
             if (input.hasNextLine()) {
                 input.nextLine();
@@ -49,19 +49,19 @@ public class JSON_Practice {
             }
 
             // Create JSON object and Array a class Object
-            JSONObject Courseone = new JSONObject();
-            Courseone.put("Grade", Grade);
-            Courseone.put("Name", Course);
+            JSONObject Addressone = new JSONObject();
+            Addressone.put("Phone Number", Pnumber);
+            Addressone.put("Address", addres);
 
             //Add the course to the array 
-            Courses.add(Courseone);
+            Courses.add(Addressone);
         }
         //Add the array to the root Object 
-        root.put("Courses", Courses);
+        root.put("Address", Courses);
 
         System.out.println(root.toJSONString());
 
-        File file = new File("StudentGrades.txt");
+        File file = new File("PersonalInformation.txt");
 
         try (PrintWriter writer = new PrintWriter(file)) {
             writer.print(root.toJSONString());
@@ -83,16 +83,16 @@ public class JSON_Practice {
             JSONParser Cloud = new JSONParser();
             JSONObject objroot = (JSONObject) Cloud.parse(jsonIn.toString());
 
-            System.out.printf("Student Name is %s\n", objroot.get("Name").toString());
+            System.out.printf("Personal Name is %s\n", objroot.get("Name").toString());
 
-            JSONArray CourseIn = (JSONArray) objroot.get("Courses");
+            JSONArray addresssIn = (JSONArray) objroot.get("Address");
 
-            for (int i = 0; i < CourseIn.size(); i++) {
-                JSONObject CoursesIn = (JSONObject) CourseIn.get(i);
-                long GradeIn = (long) CoursesIn.get("Grade");
-                String NameIn = (String) CoursesIn.get("Name");
+            for (int i = 0; i < addresssIn.size(); i++) {
+                JSONObject AddressIn = (JSONObject) addresssIn.get(i);
+                long PNumberIN = (long) AddressIn.get("Phone Number");
+                String NameIn = (String) AddressIn.get("Name");
 
-                System.out.printf("Course %s: Grade %d\n", NameIn, GradeIn);
+                System.out.printf("Personal %s: Phone Number %d\n", NameIn, PNumberIN);
 
             }
 
