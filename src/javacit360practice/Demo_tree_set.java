@@ -30,8 +30,8 @@ public class Demo_tree_set {
 /////////////////////////////////////////Second Example/////////////
 
 Books First  =new Books(15,"First Book");
-Books Second =new Books(250,"Second Book");
-Books Third  =new Books(380,"Third Book");
+Books Second =new Books(1500,"Second Book");
+Books Third  =new Books(1000,"Third Book");
 Books Fourth =new Books(458,"Fourth Book");
 Books Fifth  =new Books(805,"Fifth Book");
 

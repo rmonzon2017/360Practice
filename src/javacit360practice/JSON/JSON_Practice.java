@@ -5,6 +5,7 @@
  */
 package javacit360practice.JSON;
 
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -29,6 +30,7 @@ public class JSON_Practice {
         // Create a New Object By JSON
         JSONObject root = new JSONObject();
         root.put("Name", Name);
+         
 
         JSONArray Courses = new JSONArray();
 
