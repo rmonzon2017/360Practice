@@ -71,9 +71,4 @@ public class Controller_Students {
        return (this.Grade + this.FinaGrade)/2;
    }
         
-        
-        
-        
-    
-    
 }
