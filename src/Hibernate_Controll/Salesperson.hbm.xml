@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-jul-2019 23:10:19 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Hibernate_Controll.Salesperson" table="salesperson" catalog="dealership" optimistic-lock="version">
+        <id name="salesPersonKey" type="string">
+            <column name="salesPersonKey" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="lastName" type="string">
+            <column name="lastName" length="45" not-null="true" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="firstName" length="45" not-null="true" />
+        </property>
+        <property name="hireDate" type="date">
+            <column name="hireDate" length="10" not-null="true" />
+        </property>
+        <property name="salary" type="big_decimal">
+            <column name="salary" precision="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

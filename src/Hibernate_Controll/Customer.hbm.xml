@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-jul-2019 23:10:19 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="dealership" name="Hibernate_Controll.RegisterCars" optimistic-lock="version" table="customer">
+    <id name="customerKey" type="string">
+      <column length="8" name="customerKey"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="lastName" type="string">
+      <column length="45" name="lastName" not-null="true"/>
+    </property>
+    <property name="firstName" type="string">
+      <column length="45" name="firstName" not-null="true"/>
+    </property>
+    <property name="phone" type="string">
+      <column length="12" name="phone" not-null="true"/>
+    </property>
+    <property name="street1" type="string">
+      <column length="45" name="street1"/>
+    </property>
+    <property name="street2" type="string">
+      <column length="45" name="street2"/>
+    </property>
+    <property name="city" type="string">
+      <column length="20" name="city"/>
+    </property>
+    <property name="state" type="string">
+      <column length="2" name="state"/>
+    </property>
+    <property name="zipcode" type="string">
+      <column length="5" name="zipcode"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -16,6 +16,7 @@ public class JavaCIT360Practice {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        new Hibernate_View.Register().setVisible(true);
         
     }
     
