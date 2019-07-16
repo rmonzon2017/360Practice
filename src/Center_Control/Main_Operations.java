@@ -23,16 +23,25 @@ import Hibernate_Controll.*;
  */
 public class Main_Operations {
     
-   public void addUsers(RegisterCars user)
+   public void addUsers(RegisterCars car)
    {
          SessionFactory gate = NewHibernateUtil.getSessionFactory();
    Session session;
    session = gate.openSession();
    Transaction px = session.beginTransaction();
-   session.save(user);
+   session.save(car);
    px.commit();
    session.close();
    JOptionPane.showMessageDialog(null,"The Data was inserted successfully");
+   
+   car = null; 
+   
+   session = gate.openSession();
+   Transaction cm = session.beginTransaction();
+   car = (RegisterCars) session.get(RegisterCars.class,1);
+   System.out.println("The Object is retrieved " + car.getBrand());
+   
+   
    }
  
    

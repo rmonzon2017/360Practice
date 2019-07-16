@@ -60,7 +60,7 @@ public class Register extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel1.setText("   Welcome New User to Sign Up");
+        jLabel1.setText("   Welcome New Car to Sign Up");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N

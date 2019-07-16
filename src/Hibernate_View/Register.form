@@ -136,7 +136,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="0" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="   Welcome New User to Sign Up"/>
+        <Property name="text" type="java.lang.String" value="   Welcome New Car to Sign Up"/>
         <Property name="verticalAlignment" type="int" value="1"/>
       </Properties>
     </Component>
